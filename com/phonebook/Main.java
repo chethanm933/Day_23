@@ -167,18 +167,43 @@ public class Main {
 	
 	public static void addContacts() {
 		Contacts contact = new Contacts();
-		contact.setName(phonebook.getName());
-		contact.setLastName(phonebook.getLastName());
-		contact.setPhone(phonebook.getPhone());
-		contact.setAddress(phonebook.getAddress());
-		contact.setCity(phonebook.getCity());
-		contact.setState(phonebook.getState());
-		contact.setZip(phonebook.getZip());
-		contact.setEmail(phonebook.getEmail());
+		
+		System.out.println("Please enter a Name");
+		contact.setName(phonebook.name.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a Last Name");
+		contact.setLastName(phonebook.lastName.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a Phonenumber");
+		contact.setPhone(phonebook.phone.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a Address");
+		contact.setAddress(phonebook.address.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a City");
+		contact.setCity(phonebook.city.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a State");
+		contact.setState(phonebook.state.userDetatils(sc.next()));
+		
+		System.out.println("Please enter a Zip-Code");
+		contact.setZip(phonebook.zip.userDetatils(sc.next()));
+		
+		
+		System.out.println("Please enter a Email");
+		contact.setEmail(phonebook.email.userDetatils(sc.next()));
+		
+//		contact.setName(phonebook.getName());
+//		contact.setLastName(phonebook.getLastName());
+//		contact.setPhone(phonebook.getPhone());
+//		contact.setAddress(phonebook.getAddress());
+//		contact.setCity(phonebook.getCity());
+//		contact.setState(phonebook.getState());
+//		contact.setZip(phonebook.getZip());
+//		contact.setEmail(phonebook.getEmail());
 		
 		phoneBook.add(contact);
 		System.out.println("your contact saved successfully :\n thank you");
-		
 		}
 		
 	}
